@@ -6,6 +6,9 @@ Desktop application (Windows, Linux, macOS) to design, prepare, simulate and run
 cutting jobs on **GRBL 1.1+, grblHAL and FluidNC** controllers, with experimental support for **Marlin**
 and **Smoothieware**. Written in Python 3.12 + PySide6. Original code, icons and texts — MIT licence.
 
+<img width="1920" height="1034" alt="image" src="https://github.com/user-attachments/assets/eac16612-3a48-496c-a2da-3529babf126e" />
+
+
 [![Tests](https://github.com/Aleluya-Git/Openlaser/actions/workflows/tests.yml/badge.svg)](https://github.com/Aleluya-Git/Openlaser/actions/workflows/tests.yml)
 [![Release](https://img.shields.io/github/v/release/Aleluya-Git/Openlaser)](https://github.com/Aleluya-Git/Openlaser/releases/latest)
 
