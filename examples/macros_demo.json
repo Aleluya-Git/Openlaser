@@ -1,0 +1,47 @@
+{
+  "_nota": "Macros de prueba: ninguna activa el láser",
+  "macros": [
+    {
+      "name": "Estado ($G)",
+      "lines": [
+        "$G"
+      ],
+      "description": "Muestra el estado modal del parser."
+    },
+    {
+      "name": "Información ($I)",
+      "lines": [
+        "$I"
+      ],
+      "description": "Versión y opciones del firmware."
+    },
+    {
+      "name": "Coordenadas ($#)",
+      "lines": [
+        "$#"
+      ],
+      "description": "Desplazamientos de trabajo guardados."
+    },
+    {
+      "name": "Ir al centro",
+      "lines": [
+        "M5",
+        "G53G0X{cx}Y{cy}"
+      ],
+      "description": "Mueve en G0 (láser apagado) al centro del área."
+    },
+    {
+      "name": "Cuadrado 20 mm sin láser",
+      "lines": [
+        "M5",
+        "G91",
+        "G1X20F1500S0",
+        "G1Y20",
+        "G1X-20",
+        "G1Y-20",
+        "G90"
+      ],
+      "description": "Recorre un cuadrado relativo con S0 y M5."
+    }
+  ]
+}

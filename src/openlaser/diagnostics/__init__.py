@@ -1,0 +1,1 @@
+"""Registro estructurado y diagnóstico."""

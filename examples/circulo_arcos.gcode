@@ -1,0 +1,8 @@
+; OpenLaser Studio - ejemplo de DEMOSTRACION con arcos G2
+G90 G21
+M5
+G0 X50 Y40
+M4 S0
+G2 X50 Y40 I10 J0 F900 S150
+M5
+G0 X0 Y0

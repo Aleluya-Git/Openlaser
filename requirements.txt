@@ -1,0 +1,7 @@
+# Dependencias de ejecución
+PySide6>=6.6,<7      # LGPL-3.0 (Qt for Python)
+pyserial>=3.5        # BSD-3-Clause
+websockets>=12       # BSD-3-Clause
+numpy>=1.26          # BSD-3-Clause (Fase 3)
+# Desarrollo
+pytest>=8            # MIT

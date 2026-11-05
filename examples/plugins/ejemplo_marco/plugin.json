@@ -1,0 +1,10 @@
+{
+  "id": "ejemplo.marco",
+  "name": "Ejemplo: marco del área de trabajo",
+  "version": "1.0.0",
+  "api": 1,
+  "entry": "plugin.py",
+  "author": "OpenLaser Studio",
+  "license": "MIT",
+  "description": "Plugin de ejemplo: añade a Herramientas → Plugins una acción que dibuja un marco a 5 mm del borde del área de trabajo en una capa sin salida. Copie esta carpeta en la carpeta de plugins y actívelo en Editar → Plugins."
+}

@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.pytest_home/
+build/
+dist/
+*.egg-info/
+autoprueba_resultado.txt
+.ruff_cache/
+instalador_resultado.txt
+pyrightconfig.json

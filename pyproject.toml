@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openlaser-studio"
+version = "0.6.0"
+description = "Diseño, preparación, simulación y ejecución de trabajos láser (GRBL 1.1)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "OpenLaser Studio" }]
+dependencies = [
+    "PySide6>=6.6,<7",      # LGPL-3.0
+    "pyserial>=3.5",        # BSD-3-Clause
+    "websockets>=12",       # BSD-3-Clause
+    "numpy>=1.26",          # BSD-3-Clause (Fase 3: ráster, tramados, vectorización)
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]                       # MIT
+# Opcional: calibración de lente con tablero de ajedrez (sin OpenCV se calibra con líneas rectas)
+opencv = ["opencv-python>=4.8"]                              # Apache-2.0
+
+[project.scripts]
+openlaser-sim = "openlaser.simulator.tcp_server:main"
+
+[project.gui-scripts]
+openlaser-studio = "openlaser.ui.app:main"
+
+[project.urls]
+Homepage = "https://github.com/Aleluya-Git/Openlaser"
+Issues = "https://github.com/Aleluya-Git/Openlaser/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"openlaser.i18n" = ["locales/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 125
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B"]
+ignore = ["E501", "B008", "B009", "B023", "B905"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true

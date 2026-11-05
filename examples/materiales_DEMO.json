@@ -1,0 +1,9 @@
+{
+  "_aviso": "BIBLIOTECA FICTICIA DE DEMOSTRACION. Estos valores NO son seguros ni validos para ninguna maquina real. Cada combinacion debe probarse y validarse en su maquina, modulo laser y material. La biblioteca funcional llega en la Fase 4.",
+  "demo": true,
+  "materiales": [
+    {"material": "Contrachapado DEMO", "variante": "abedul", "espesor_mm": 3, "operacion": "corte", "velocidad_mm_min": 300, "potencia_pct": 90, "pasadas": 2, "intervalo_mm": null, "air_assist": true, "frecuencia": null, "maquina": "Simulador GRBL (demo)", "modulo": "diodo 10 W (ficticio)", "fecha_validacion": null, "resultado": "sin validar", "notas": "Valor inventado para la demo", "foto": null},
+    {"material": "MDF DEMO", "variante": "crudo", "espesor_mm": 3, "operacion": "grabado linea", "velocidad_mm_min": 2000, "potencia_pct": 30, "pasadas": 1, "intervalo_mm": null, "air_assist": true, "frecuencia": null, "maquina": "Simulador GRBL (demo)", "modulo": "diodo 10 W (ficticio)", "fecha_validacion": null, "resultado": "sin validar", "notas": "Valor inventado para la demo", "foto": null},
+    {"material": "Carton DEMO", "variante": "gris", "espesor_mm": 1.5, "operacion": "relleno", "velocidad_mm_min": 3000, "potencia_pct": 20, "pasadas": 1, "intervalo_mm": 0.1, "air_assist": false, "frecuencia": null, "maquina": "Simulador GRBL (demo)", "modulo": "diodo 10 W (ficticio)", "fecha_validacion": null, "resultado": "sin validar", "notas": "Valor inventado para la demo", "foto": null}
+  ]
+}
