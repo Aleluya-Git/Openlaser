@@ -7,6 +7,9 @@ grabado y corte láser con controladores **GRBL 1.1+, grblHAL y FluidNC**, y de 
 **Marlin** y **Smoothieware**. Escrita en Python 3.12 + PySide6. Código, iconos y textos originales —
 licencia MIT.
 
+<img width="1920" height="1034" alt="image" src="https://github.com/user-attachments/assets/99541cb7-b0a4-4dec-afeb-c02eefe9b34b" />
+
+
 > ⚠️ **La seguridad, primero.** OpenLaser Studio no sustituye los interlocks físicos, la parada de
 > emergencia cableada, la supervisión permanente, la extracción de humos ni la protección ocular
 > certificada para la longitud de onda de su láser. Los valores de los materiales de demostración son
