@@ -7,6 +7,9 @@ de gravure et de découpe laser avec des contrôleurs **GRBL 1.1+, grblHAL et Fl
 expérimentale **Marlin** et **Smoothieware**. Écrite en Python 3.12 + PySide6. Code, icônes et textes
 originaux — licence MIT.
 
+<img width="1920" height="1034" alt="image" src="https://github.com/user-attachments/assets/101c1919-904f-44f1-b158-f398a7fac494" />
+
+
 > ⚠️ **La sécurité d'abord.** OpenLaser Studio ne remplace pas les verrouillages physiques, l'arrêt
 > d'urgence câblé, la surveillance permanente, l'extraction des fumées ni une protection oculaire
 > certifiée pour la longueur d'onde de votre laser. Les valeurs des matériaux de démonstration sont
