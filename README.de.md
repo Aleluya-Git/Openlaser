@@ -7,6 +7,8 @@ Lasergravur- und Schneidaufträgen mit **GRBL 1.1+, grblHAL und FluidNC** sowie 
 **Marlin** und **Smoothieware**. Geschrieben in Python 3.12 + PySide6. Eigener Code, eigene Symbole und
 Texte — MIT-Lizenz.
 
+<img width="1920" height="1034" alt="image" src="https://github.com/user-attachments/assets/b8dfbfd5-d8ac-4e9b-bbff-2854a249f582" />
+
 > ⚠️ **Sicherheit zuerst.** OpenLaser Studio ersetzt keine physischen Verriegelungen, keinen fest
 > verdrahteten Not-Aus, keine ständige Aufsicht, keine Rauchabsaugung und keinen für die Wellenlänge
 > Ihres Lasers zertifizierten Augenschutz. Die Werte der Demo-Materialien sind fiktiv: Prüfen Sie jede
