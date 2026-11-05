@@ -1,12 +1,12 @@
 @echo off
 rem OpenLaser Studio - genera el instalador de Windows
 rem   1. pruebas  2. ejecutable (PyInstaller)  3. prueba del ejecutable  4. instalador (Inno Setup 6)
-rem Resultado: dist\OpenLaserStudio-0.6.0-setup.exe  (registro en instalador_resultado.txt)
+rem Resultado: dist\OpenLaserStudio-0.6.1-setup.exe  (registro en instalador_resultado.txt)
 setlocal
 cd /d "%~dp0"
 set "PY=.venv\Scripts\python.exe"
 set "OUT=instalador_resultado.txt"
-set "VER=0.6.0"
+set "VER=0.6.1"
 if not exist "%PY%" (
   echo Ejecute primero install.bat
   pause

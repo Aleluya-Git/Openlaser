@@ -10,10 +10,10 @@
    3. **Prueba del ejecutable**: se arranca con el simulador y debe dejar `docs\captura_instalador.png`.
    4. Instalador con **Inno Setup 6** (`packaging/installer.iss`). Si no está instalado, se intenta con
       `winget install JRSoftware.InnoSetup`. Si tampoco se puede, se genera
-      `dist\OpenLaserStudio-0.6.0-portable.zip`.
+      `dist\OpenLaserStudio-0.6.1-portable.zip`.
 3. El registro completo queda en `instalador_resultado.txt`.
 
-Resultado: **`dist\OpenLaserStudio-0.6.0-setup.exe`**.
+Resultado: **`dist\OpenLaserStudio-0.6.1-setup.exe`**.
 
 ## Qué hace el instalador
 

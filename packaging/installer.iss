@@ -1,9 +1,9 @@
 ; Instalador de OpenLaser Studio para Windows (Inno Setup 6).
 ; Lo compila build_installer.bat a partir de dist\OpenLaserStudio (PyInstaller).
-; Resultado: dist\OpenLaserStudio-0.6.0-setup.exe
+; Resultado: dist\OpenLaserStudio-0.6.1-setup.exe
 
 #define AppName "OpenLaser Studio"
-#define AppVersion "0.6.0"
+#define AppVersion "0.6.1"
 #define AppExe "OpenLaserStudio.exe"
 #define AppPublisher "OpenLaser Studio contributors"
 

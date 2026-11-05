@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 DEFAULT_APP_NAME = "OpenLaser Studio"
-APP_VERSION = "0.6.0"
+APP_VERSION = "0.6.1"
 APP_ORG = "OpenLaser"
 
 

@@ -1,18 +1,18 @@
 # Metadatos del ejecutable (propiedades del archivo en Windows). build_installer.bat comprueba que la
 # versión coincide con pyproject.toml.
 VSVersionInfo(
-  ffi=FixedFileInfo(filevers=(0, 6, 0, 0), prodvers=(0, 6, 0, 0), mask=0x3f, flags=0x0, OS=0x40004,
+  ffi=FixedFileInfo(filevers=(0, 6, 1, 0), prodvers=(0, 6, 1, 0), mask=0x3f, flags=0x0, OS=0x40004,
                     fileType=0x1, subtype=0x0, date=(0, 0)),
   kids=[
     StringFileInfo([StringTable('040A04B0', [
       StringStruct('CompanyName', 'OpenLaser Studio contributors'),
       StringStruct('FileDescription', 'OpenLaser Studio'),
-      StringStruct('FileVersion', '0.6.0'),
+      StringStruct('FileVersion', '0.6.1'),
       StringStruct('InternalName', 'OpenLaserStudio'),
       StringStruct('LegalCopyright', 'MIT License - (c) 2026 OpenLaser Studio contributors'),
       StringStruct('OriginalFilename', 'OpenLaserStudio.exe'),
       StringStruct('ProductName', 'OpenLaser Studio'),
-      StringStruct('ProductVersion', '0.6.0')])]),
+      StringStruct('ProductVersion', '0.6.1')])]),
     VarFileInfo([VarStruct('Translation', [0x040A, 1200])])
   ]
 )
