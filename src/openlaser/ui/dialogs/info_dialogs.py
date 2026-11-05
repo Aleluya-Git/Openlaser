@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import time
 
+from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QDialog, QDialogButtonBox, QDoubleSpinBox, QFormLayout, QLabel, QPlainTextEdit, QTextBrowser, QVBoxLayout,
     QWidget,
@@ -45,13 +46,40 @@ def _text_dialog(parent: QWidget | None, title: str, html: str, width: int = 620
     return dlg
 
 
+PROJECT_URL = "https://github.com/Aleluya-Git/Openlaser"
+
+
 def about_dialog(parent: QWidget | None) -> QDialog:
-    html = (f"<h2>{app_name()} {APP_VERSION}</h2>"
+    from openlaser.ui import icons
+    dlg = QDialog(parent)
+    dlg.setWindowTitle(tr("Acerca de"))
+    dlg.resize(560, 500)
+    lay = QVBoxLayout(dlg)
+    # El logotipo tiene texto oscuro: se muestra siempre sobre una tarjeta blanca (también en el tema oscuro).
+    logo = QLabel()
+    logo.setObjectName("aboutLogo")
+    logo.setAlignment(Qt.AlignmentFlag.AlignCenter)
+    ratio = dlg.devicePixelRatioF() if hasattr(dlg, "devicePixelRatioF") else 1.0
+    pm = icons.logo_pixmap(460, ratio)
+    if pm.isNull():
+        logo.setText(f"<h2>{app_name()}</h2>")
+    else:
+        logo.setPixmap(pm)
+    logo.setStyleSheet("QLabel#aboutLogo { background: #ffffff; border-radius: 8px; padding: 18px 12px; }")
+    lay.addWidget(logo)
+    html = (f"<p style='font-size:13pt'><b>{app_name()}</b> {tr('versión')} {APP_VERSION}</p>"
             f"<p>{tr('Diseño, preparación, simulación y ejecución de trabajos de grabado y corte láser.')}</p>"
-            f"<p>{tr('Fase 1: interfaz principal, movimiento, simulador GRBL, consola, estados y seguridad.')}</p>"
+            f"<p><a href='{PROJECT_URL}'>{PROJECT_URL}</a> · {tr('Licencia MIT')}</p>"
             f"<p><b>{tr('Seguridad')}</b>: {tr(DISCLAIMER_ES)}</p>"
             f"<p>{tr('Nombre, iconos y textos originales. No contiene código ni recursos de LaserGRBL ni LightBurn.')}</p>")
-    return _text_dialog(parent, tr("Acerca de"), html, 520, 380)
+    view = QTextBrowser()
+    view.setOpenExternalLinks(True)
+    view.setHtml(html)
+    lay.addWidget(view, 1)
+    bb = QDialogButtonBox(QDialogButtonBox.StandardButton.Close)
+    bb.rejected.connect(dlg.reject)
+    lay.addWidget(bb)
+    return dlg
 
 
 def safety_dialog(parent: QWidget | None) -> QDialog:

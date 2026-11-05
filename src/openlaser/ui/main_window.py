@@ -195,7 +195,7 @@ class MainWindow(Phase4ActionsMixin, DocumentActionsMixin, QMainWindow):
         self._pending_timer.timeout.connect(self._maybe_show_pending)
         self.settings = settings
         self.settings_path = settings_path
-        self.setWindowIcon(icons.icon("app"))
+        self.setWindowIcon(icons.app_icon())
         self.safety = SafetyManager(settings.safety)
         self.profile: DeviceProfile = settings.active_profile()
         self._simulator: Any = GrblSimulator()  # GrblSimulator o MarlinSimulator según el perfil

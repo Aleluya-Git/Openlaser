@@ -28,6 +28,8 @@ a = Analysis(
         (str(ROOT / "examples"), "examples"),
         # idiomas: inglés, francés, alemán y la plantilla para crear otros
         (str(ROOT / "src" / "openlaser" / "i18n" / "locales"), "openlaser/i18n/locales"),
+        # logotipo e icono de la aplicación
+        (str(ROOT / "src" / "openlaser" / "ui" / "assets"), "openlaser/ui/assets"),
         (str(ROOT / "LICENSE"), "."),
         (str(ROOT / "docs" / "LICENCIAS.md"), "."),
     ],

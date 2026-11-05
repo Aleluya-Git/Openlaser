@@ -53,3 +53,14 @@ def test_spec_bundles_language_files():
     spec = (ROOT / "packaging" / "openlaser.spec").read_text(encoding="utf-8")
     assert '"openlaser/i18n/locales"' in spec
     assert '"openlaser.i18n" = ["locales/*.json"]' in (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+
+
+def test_logo_and_icon_assets():
+    assets = ROOT / "src" / "openlaser" / "ui" / "assets"
+    for name in ("logo.png", "app_icon.png"):
+        data = (assets / name).read_bytes()
+        assert data[:8] == b"\x89PNG\r\n\x1a\n", name
+    ico = (ROOT / "packaging" / "openlaser.ico").read_bytes()
+    assert ico[:4] == b"\x00\x00\x01\x00" and int.from_bytes(ico[4:6], "little") >= 5  # varias resoluciones
+    spec = (ROOT / "packaging" / "openlaser.spec").read_text(encoding="utf-8")
+    assert '"openlaser/ui/assets"' in spec

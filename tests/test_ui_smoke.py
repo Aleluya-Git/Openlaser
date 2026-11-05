@@ -771,3 +771,20 @@ def test_motion_and_banner_icons_colored(app, win):
     assert c_d.alpha() < c_n.alpha() and abs(c_d.hue() - c_n.hue()) <= 6
     # botones con fondo rojo: icono blanco (no se confunde con el fondo)
     assert not win.banner.btn_stop.icon().isNull() and not win.banner.btn_estop.icon().isNull()
+
+
+def test_about_dialog_shows_logo_and_app_icon(app, win):
+    from PySide6.QtWidgets import QLabel
+
+    from openlaser.ui import icons
+    from openlaser.ui.dialogs.info_dialogs import about_dialog
+
+    assert not icons.app_icon().isNull()
+    assert not win.windowIcon().isNull()
+    dlg = about_dialog(win)
+    logo = dlg.findChild(QLabel, "aboutLogo")
+    assert logo is not None and logo.pixmap() is not None and not logo.pixmap().isNull()
+    dlg.show()
+    pump(app, 0.2)
+    dlg.grab().save(str(__import__("pathlib").Path(__file__).resolve().parents[1] / "docs" / "captura_acerca_de.png"))
+    dlg.close()

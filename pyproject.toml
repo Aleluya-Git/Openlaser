@@ -37,6 +37,7 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 "openlaser.i18n" = ["locales/*.json"]
+"openlaser.ui" = ["assets/*.png"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

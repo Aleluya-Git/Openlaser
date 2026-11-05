@@ -17,6 +17,7 @@ Los estados seleccionado/pulsado y deshabilitado se dibujan siempre en monocromo
 from __future__ import annotations
 
 import re
+from pathlib import Path
 
 from PySide6.QtCore import QByteArray, QRectF, Qt
 from PySide6.QtGui import QColor, QIcon, QPainter, QPixmap
@@ -298,6 +299,37 @@ def _mix(a: str, b: str, t: float) -> str:
     g = round(ca.green() * (1 - t) + cb.green() * t)
     bl = round(ca.blue() * (1 - t) + cb.blue() * t)
     return f"#{r:02x}{g:02x}{bl:02x}"
+
+
+ASSETS_DIR = Path(__file__).with_name("assets")
+
+
+def asset_path(name: str) -> Path:
+    """Imagen incluida con el programa (logotipo, icono de la aplicación)."""
+    return ASSETS_DIR / name
+
+
+def app_icon() -> QIcon:
+    """Icono del programa (símbolo del logotipo). Si faltara el archivo, se usa el icono dibujado."""
+    path = asset_path("app_icon.png")
+    if not path.is_file():
+        return icon("app")
+    src = QPixmap(str(path))
+    ic = QIcon()
+    for size in (16, 24, 32, 48, 64, 128, 256):
+        ic.addPixmap(src.scaled(size, size, Qt.AspectRatioMode.KeepAspectRatio,
+                                Qt.TransformationMode.SmoothTransformation))
+    return ic
+
+
+def logo_pixmap(width: int, ratio: float = 1.0) -> QPixmap:
+    """Logotipo completo (símbolo + «OpenLaser Studio») escalado a ``width`` píxeles lógicos."""
+    src = QPixmap(str(asset_path("logo.png")))
+    if src.isNull():
+        return src
+    pm = src.scaledToWidth(int(width * ratio), Qt.TransformationMode.SmoothTransformation)
+    pm.setDevicePixelRatio(ratio)
+    return pm
 
 
 def _faded(pm: QPixmap, opacity: float) -> QPixmap:

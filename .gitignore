@@ -10,3 +10,4 @@ autoprueba_resultado.txt
 .ruff_cache/
 instalador_resultado.txt
 pyrightconfig.json
+docs/captura_*.png

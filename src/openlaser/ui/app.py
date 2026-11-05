@@ -56,6 +56,15 @@ def main(argv: list[str] | None = None) -> int:
     theme.apply_theme(app, settings.theme)
     from openlaser.ui import icons
     icons.set_color_mode(settings.color_icons)
+    if sys.platform == "win32":
+        # Sin esto, Windows agrupa la ventana bajo el icono de python.exe en la barra de tareas.
+        try:
+            import ctypes
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(  # type: ignore[attr-defined]
+                f"OpenLaserStudio.{APP_VERSION}")
+        except (AttributeError, OSError):
+            pass
+    app.setWindowIcon(icons.app_icon())
 
     from openlaser.ui.main_window import MainWindow
     win = MainWindow(settings, path, interactive=not args.screenshot)
