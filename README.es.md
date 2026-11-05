@@ -1,3 +1,5 @@
+<img width="1100" height="250" alt="Logo Openlaser" src="https://github.com/user-attachments/assets/889076ac-5cb7-4d92-a470-d0718cab5827" />
+
 # OpenLaser Studio
 
 [English](README.md) · **Español** · [Français](README.fr.md) · [Deutsch](README.de.md)
